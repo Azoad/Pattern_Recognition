@@ -1,7 +1,7 @@
 clc;
 clear;
 
-file = fopen('input2.txt','r');
+file = fopen('input4.txt','r');
 f = fscanf(file,'%f');
 setup();
 n = f(1,1);
@@ -9,7 +9,7 @@ n = f(1,1);
 for i=2:2:length(f)
     x(i/2) = f(i);
     y(i/2) = f(i+1);
-    plot(x(i/2),y(i/2),'r*');
+    plot(x(i/2),y(i/2),'black*');
     hold on
 end
 
@@ -32,7 +32,7 @@ for i = 1: lc
     if (slpq == slpr && slpr == slps)
         ni(j) = i;
         j = j+1;
-        plot([px;qx;rx;sx],[py;qy;ry;sy],'b-')
+        plot([px;qx;rx;sx],[py;qy;ry;sy],'black-')
         fprintf('\n\n(%d, %d)->(%d, %d)->(%d, %d)->(%d, %d)',px,py,qx,qy,rx,ry,sx,sy);
     end
 end
